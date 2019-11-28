@@ -53,7 +53,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  **사용자 지정 배포** 블레이드의 **GitHub 빠른 시작 템플릿 로드** 드롭다운 목록에서 **active-directory-new-domain-ha-2-dc** 항목을 선택하고 **템플릿 선택**을 클릭합니다.
 
-    > **참고**: 또는 Azure 빠른 시작 템플릿 페이지(<https://github.com/Azure/azure-quickstart-templates>)로 이동하고 **Create 2 new Windows VMs, create a new AD Forest, Domain, and 2 DCs in an availability set**라는 이름의 템플릿의 찾은 다음 **Azure에 배포** 단추를 클릭하여 배포를 시작할 수 있습니다.
+    > **참고**: 또는, Azure 빠른 시작 템플릿 페이지(<https://github.com/Azure/azure-quickstart-templates>)로 이동하여 **Create 2 new Windows VMs, create a new AD Forest, Domain, and 2 DCs in an availability set** 라는 이름의 템플릿의 찾고, **Deploy to Azure** 단추를 클릭하여 배포를 시작할 수 있습니다.
 	
 1.  **도메인 컨트롤러 2개가 포함된 새 AD 도메인 만들기** 블레이드에서 **템플릿 편집**을 클릭합니다.
 

@@ -31,7 +31,7 @@ Azure 기반 SAP HANA 배포를 준비하기 위해 Adatum Corporation에서는 
 
 ## 요구 사항
 
--   Microsoft Azure 구독
+-   충분한 수의 DSv3 vCPU(2x4) 및 DSv2(1x1) vCPU를 사용할 수 있는 Microsoft Azure 구독
 
 -   Windows 10, Windows Server 2016 또는 Windows Server 2019를 실행하고 Azure에 액세스할 수 있는 랩 컴퓨터
 

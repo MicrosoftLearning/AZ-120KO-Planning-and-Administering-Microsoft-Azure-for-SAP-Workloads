@@ -94,7 +94,7 @@ az network vnet subnet list --resource-group $RESOURCE_GROUP_NAME --vnet-name $V
 
     > **참고**: Microsoft Edge 또는 타사 브라우저를 사용해야 합니다. Internet Explorer를 사용하지 마십시오.
 
-1.  **SAP NetWeaver 3-tier compatible template using a Marketplace image - MD**라는 제목의 페이지에서 **Deploy to Azure**를 클릭합니다. 브라우저가 Azure Portal로 자동으로 리디렉션되고 **SAP NetWeaver 3-tier (managed disk)** 블레이드가 표시됩니다.
+1.  **SAP NetWeaver 3-tier compatible template using a Marketplace image - MD**라는 제목의 페이지에서 **Deploy to Azure**를 클릭합니다. 브라우저가 Azure Portal로 자동 리디렉션되고 **SAP NetWeaver 3-tier (managed disk)** 블레이드가 표시됩니다.
 
 1.  **SAP NetWeaver 3계층(관리 디스크)** 블레이드에서 **템플릿 편집**을 클릭합니다.
 
@@ -427,7 +427,7 @@ ssh root@i20-db-1
 1.  다음 명령을 실행하여 i20-db-0에서 i20-db-1로의 SSH 세션을 닫습니다.  
 
 ```
-    exit
+exit
 ``` 
 
 1.  i20-db-1로의 SSH 세션에서 다음 명령을 실행하여 **root** 사용자로 i20-db-1에서 i20-db-0으로의 SSH 세션을 설정합니다. 
@@ -490,15 +490,15 @@ ha-cluster-init
 
 1.  메시지가 표시되면 다음 답변을 입력합니다.
 
-    -   Do you want to continue anyway (y/n)? **y**
+    -   계속하시겠습니까(y/n)? **y**
 
-    -   /root/.ssh/id_rsa already exists - overwrite (y/n)? **n**
+    -   /root/.ssh/id_rsa가 이미 존재합니다. 덮어쓰시겠습니까(y/n)? **n**
 
     -   Address for ring0 [10.3.0.20]: **ENTER**
 
     -   Port for ring0 [5405]: **ENTER**
 
-    -   Do you wish to use SBD (y/n)?: **n**
+    -   SBD를 사용하시겠습니까(y/n)?: **n**
 
     -   Do you wish to configure a virtual IP address (y/n)?: **n**
 	
@@ -516,9 +516,9 @@ ha-cluster-join
 
     -   IP address or hostname of existing node (e.g.: 192.168.1.1) \[\]: **i20-db-0**
 
-    -   /root/.ssh/id\_rsa already exists - overwrite (y/n)? **n**
+    -   /root/.ssh/id\_rsa가 이미 존재합니다. 덮어쓰시겠습니까(y/n)? **n**
 
-    -   /root/.ssh/id\_dsa already exists - overwrite (y/n)? **n**
+    -   /root/.ssh/id\_dsa가 이미 존재합니다. 덮어쓰시겠습니까(y/n)? **n**
 
     -   Address for ring0 [10.3.0.21]: **Enter**
 
@@ -532,7 +532,7 @@ passwd hacluster
 
 ### 태스크 2: corosync 구성 검토 
 
-1.  az12003a-vm0에 대한 RDP 세션 내의 i20-db-0에 대한 PuTTY 기반 SSH 세션에서 다음을 실행하여 vi 편집기에서 **/etc/corosync/corosync.conf** 파일을 엽니다.
+1.  i20-db-0에 대한 PuTTY 기반 SSH 세션(az12003a-vm0에 대한 RDP 세션에 위치)에서 다음을 실행하여 **/etc/corosync/corosync.conf** 콘텐츠를 검토합니다.
 
 ```
 cat /etc/corosync/corosync.conf

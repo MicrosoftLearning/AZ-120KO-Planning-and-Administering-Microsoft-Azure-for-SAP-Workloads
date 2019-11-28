@@ -135,7 +135,7 @@ $vNet = Get-AzVirtualNetwork -ResourceGroupName $resourceGroupName -Name $vNetNa
 
     > **참고**: Microsoft Edge 또는 타사 브라우저를 사용해야 합니다. Internet Explorer를 사용하지 마십시오.
 
-1.  **SAP NetWeaver 3-tier compatible template using a Marketplace image - MD**라는 제목의 페이지에서 **Deploy to Azure**를 클릭합니다. 브라우저가 Azure Portal로 자동으로 리디렉션되고 **SAP NetWeaver 3-tier (managed disk)** 블레이드가 표시됩니다.
+1.  **SAP NetWeaver 3-tier compatible template using a Marketplace image - MD**라는 제목의 페이지에서 **Deploy to Azure**를 클릭합니다. 브라우저가 Azure Portal로 자동 리디렉션되고 **SAP NetWeaver 3-tier (managed disk)** 블레이드가 표시됩니다.
 
 1.  **SAP NetWeaver 3-tier (managed disk)** 블레이드에서 다음 설정을 사용하여 배포를 시작합니다.
 
@@ -185,7 +185,7 @@ $vNet = Get-AzVirtualNetwork -ResourceGroupName $resourceGroupName -Name $vNetNa
 
     > **참고**: Microsoft Edge 또는 타사 브라우저를 사용해야 합니다. Internet Explorer를 사용하지 마십시오.
 
-1.  **Use Managed Disks to Create a Storage Spaces Direct (S2D) Scale-Out File Server (SOFS) Cluster with Windows Server 2016** 페이지에서 **Azure에 배포**를 클릭합니다. 브라우저가 Azure Portal로 자동으로 리디렉션되고 **사용자 지정 배포** 블레이드가 표시됩니다.
+1.  **Use Managed Disks to Create a Storage Spaces Direct (S2D) Scale-Out File Server (SOFS) Cluster with Windows Server 2016** 페이지에서 **Deploy to Azure**를 클릭합니다. 브라우저가 Azure Portal로 자동으로 리디렉션되고 **사용자 지정 배포** 블레이드가 표시됩니다.
 
 1.  **사용자 지정 배포** 블레이드에서 다음 설정을 사용하여 배포를 시작 합니다.
 
