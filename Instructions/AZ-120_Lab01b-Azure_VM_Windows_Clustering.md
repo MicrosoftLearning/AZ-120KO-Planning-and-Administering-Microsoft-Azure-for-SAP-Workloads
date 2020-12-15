@@ -1,11 +1,5 @@
-﻿---
-lab:
-    title: '3b: Azure VM에서 Windows 클러스터링 구현'
-    module: '모듈 3: Azure의 SAP 인증 제공'
----
-
-# AZ 120 모듈 3: Azure의 SAP 인증 제공
-# 랩 3b: Azure VM에서 Windows 클러스터링 구현
+﻿# AZ 120 모듈 1: Azure의 SAP 인증 제공
+# 랩 1b: Azure VM에서 Windows 클러스터링 구현
 
 예상 시간: 120분
 
@@ -67,7 +61,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 1.  **템플릿 편집** 블레이드에서 **adVMSize** 변수의 값을 **Standard_D4S_v3**로 설정하고 **저장**을 클릭합니다.
 
 ```
-"adVMSize": "Standard_D4S_v3"
+"adVMSize": "Standard_D4s_v3"
 
 ```
 
@@ -91,7 +85,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   Bdc RDP 포트: **13389**
 
-    -   _artifacts 위치: **https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/active-directory-new-domain-ha-2-dc**
+    -   _artifacts 위치: **https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/active-directory-new-domain-ha-2-dc/**
 
     -   _artifacts 위치 SAS 토큰: *비워 둠*
 
@@ -820,7 +814,7 @@ New-AzLoadBalancer -ResourceGroupName $resourceGroupName -Location $location -Na
 
 1.  RDP를 통해 새로 프로비전된 Azure VM에 연결합니다. 
 
-1.  az12001b-vm2에 대한 RDP 세션 내에서 개인 IP 주소(각각 10.0.1.4 및 10.0.1.5)를 통해 az12001b-cl--vm0 및 az12001b-cl--vm1에 대한 SSH 세션을 설정할 수 있는지 확인합니다. 
+1.  az12001b-vm2에 대한 RDP 세션 내에서 개인 IP 주소(각각 10.0.1.4 및 10.0.1.5)를 통해 az12001b-cl--vm0 및 az12001b-cl--vm1에 대한 RDP 세션을 설정할 수 있는지 확인합니다. 
 
 > **결과**: 이 연습을 완료한 후 고가용성 SAP NetWeaver 배포를 지원하는 데 필요한 Azure 네트워크 리소스가 프로비전되었습니다.
 
