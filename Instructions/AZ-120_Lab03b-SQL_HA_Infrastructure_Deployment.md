@@ -58,7 +58,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   위치: *Azure VM을 배포할 수 있고 랩 위치와 가장 가까운 Azure 지역*
 
-    -   관리자 사용자 이름: **학생**
+    -   관리자 사용자 이름: **Student**
 
     -   위치: *위에서 지정한 곳과 같은 Azure 지역*
 
@@ -156,7 +156,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   시스템 가용성: **HA**
 
-    -   관리자 사용자 이름: **학생**
+    -   관리자 사용자 이름: **Student**
 
     -   인증 유형: **암호**
 
@@ -210,7 +210,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   기존 도메인 이름: **adatum.com**
 
-    -   관리자 사용자 이름: **학생**
+    -   관리자 사용자 이름: **Student**
 
     -   관리자 암호: **Pa55w.rd1234**
 
@@ -266,7 +266,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   크기: **표준 D2s v3**
 
-    -   사용자 이름: **학생**
+    -   사용자 이름: **Student**
 
     -   암호: **Pa55w.rd1234**
 

@@ -10,7 +10,7 @@
 
     -   2 x Standard_E4s_v3 (4 vCPUs each) = 8
 
-    > **참고**: 가용성 영역을 지원하는 Azure 지역을 확인하려면 [https://docs.microsoft.com/ko-kr/azure/availability-zones/az-overview]<https://docs.microsoft.com/ko-kr/azure/availability-zones/az-overview>를 참조하세요.
+    > **참고**: 가용성 영역을 지원하는 Azure 지역을 확인하려면 [https://docs.microsoft.com/ko-kr/azure/availability-zones/az-overview](https://docs.microsoft.com/ko-kr/azure/availability-zones/az-overview)를 참조하세요.
 
 이 과정의 처음 3개 랩에 대한 vCPU 요구 사항은 낮습니다. 그러나 할당량 증가 프로세스에는 시간이 조금 걸릴 수 있으므로(할당량 증가 요청은 일반적으로 당일(영업일 기준) 내에 완료됨) 할당량 증가를 요청하여 모든 랩의 요구 사항을 충족하는 것이 좋습니다.
 

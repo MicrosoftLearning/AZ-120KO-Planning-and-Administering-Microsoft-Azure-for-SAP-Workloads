@@ -159,7 +159,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   크기: **표준 D2s v3**
 
-    -   사용자 이름: **학생**
+    -   사용자 이름: **Student**
 
     -   암호: **Pa55w.rd1234**
 
