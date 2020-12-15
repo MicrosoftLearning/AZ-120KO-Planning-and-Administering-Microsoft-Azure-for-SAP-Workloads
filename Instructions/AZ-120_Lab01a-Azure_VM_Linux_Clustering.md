@@ -5,7 +5,7 @@
 
 이 랩의 모든 작업은 Azure Portal(Bash Cloud Shell 세션 포함)에서 수행됩니다.  
 
-   > **참고**: Cloud Shell을 사용하지 않는 경우 랩 가상 머신에 Azure CLI를 설치([**https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli-windows?view=azure-cli-latest**](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest))하고 [**https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)에서 제공되는 SSH 클라이언트(예: PuTTY)를 포함해야 합니다.
+   > **참고**: Cloud Shell을 사용하지 않는 경우 랩 가상 머신에 Azure CLI를 설치([**https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli-windows?view=azure-cli-latest**](https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli-windows?view=azure-cli-latest))하고 [**https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)에서 제공되는 SSH 클라이언트(예: PuTTY)를 포함해야 합니다.
 
 랩 파일: 없음
 

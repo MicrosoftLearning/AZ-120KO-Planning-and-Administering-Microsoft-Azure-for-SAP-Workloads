@@ -5,7 +5,7 @@
 
 이 랩의 모든 작업은 Azure Portal(Bash Cloud Shell 세션 포함)에서 수행됩니다.  
 
-   > **참고**: Cloud Shell을 사용하지 않는 경우 랩 가상 머신에는 Azure CLI가 설치되어 있어야 합니다. [**https://docs.microsoft.com/en-us/powershell/azure/azurerm/install-azurerm-ps**](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest)
+   > **참고**: Cloud Shell을 사용하지 않는 경우 랩 가상 머신에는 Azure CLI가 설치되어 있어야 합니다. [**https://docs.microsoft.com/ko-kr/powershell/azure/azurerm/install-azurerm-ps**](https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli-windows?view=azure-cli-latest)
 
 랩 파일: 없음
 

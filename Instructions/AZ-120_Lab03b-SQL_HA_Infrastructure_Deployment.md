@@ -5,7 +5,7 @@
 
 이 랩의 모든 작업은 Azure Portal(PowerShell Cloud Shell 세션 포함)에서 수행됩니다.  
 
-   > **참고**: Cloud Shell을 사용하지 않는 경우 랩 가상 머신에 Az PowerShell 모듈이 설치되어 있어야 합니다([**https://docs.microsoft.com/en-us/powershell/azure/install-az-ps-msi?view=azps-2.8.0**](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps-msi?view=azps-2.8.0)).
+   > **참고**: Cloud Shell을 사용하지 않는 경우 랩 가상 머신에 Az PowerShell 모듈이 설치되어 있어야 합니다([**https://docs.microsoft.com/ko-kr/powershell/azure/install-az-ps-msi?view=azps-2.8.0**](https://docs.microsoft.com/ko-kr/powershell/azure/install-az-ps-msi?view=azps-2.8.0)).
 
 랩 파일: 없음
 
