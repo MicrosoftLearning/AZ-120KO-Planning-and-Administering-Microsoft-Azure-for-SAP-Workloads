@@ -48,22 +48,22 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 1.  **사용자 지정 배포** 블레이드의 **GitHub 빠른 시작 템플릿 로드** 드롭다운 목록에서 **active-directory-new-domain-ha-2-dc** 항목을 선택하고 **템플릿 선택**을 클릭합니다.
 
     > **참고**: 또는, Azure 빠른 시작 템플릿 페이지(<https://github.com/Azure/azure-quickstart-templates>)로 이동하여 **Create 2 new Windows VMs, create a new AD Forest, Domain, and 2 DCs in an availability set** 라는 이름의 템플릿의 찾고, **Deploy to Azure** 단추를 클릭하여 배포를 시작할 수 있습니다.
-	
+
 1.  **도메인 컨트롤러 2개가 포함된 새 AD 도메인 만들기** 블레이드에서 **템플릿 편집**을 클릭합니다.
 
 1.   **템플릿** 블레이드에서 **adVMSize** 변수에 값을 할당하는 줄을 찾습니다.
 
-```
+    ```
     "adVMSize": "Standard_DS2_v2"
 
-```
+    ```
 
 1.  **템플릿 편집** 블레이드에서 **adVMSize** 변수의 값을 **Standard_D4S_v3**로 설정하고 **저장**을 클릭합니다.
 
-```
+    ```
     "adVMSize": "Standard_D4s_v3"
 
-```
+    ```
 
 1.  **도메인 컨트롤러 2개가 포함된 새 AD 도메인 만들기** 블레이드로 돌아와 다음 설정을 지정하고 **구매**를 클릭하여 배포를 시작합니다.
 
@@ -154,11 +154,11 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     -   OS 게스트 진단: **꺼짐**
 
     -   시스템 할당 관리 ID: **꺼짐**
-	
+
     -	AAD 자격 증명으로 로그인(미리 보기): **해제**
 
     -   자동 종료 사용 설정: **꺼짐**
-	
+
     -	백업 사용: **해제**
 
     -   확장: *없음*
@@ -220,11 +220,11 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     -   OS 게스트 진단: **꺼짐**
 
     -   시스템 할당 관리 ID: **꺼짐**
-	
+
     -	AAD 자격 증명으로 로그인(미리 보기): **해제**
 
     -   자동 종료 사용 설정: **꺼짐**
-	
+
     -	백업 사용: **해제**
 
     -   확장: *없음*
@@ -241,7 +241,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Cloud Shell 창에서 다음 명령을 실행하여 4개의 관리 디스크로 구성된 첫 번째 세트를 만듭니다. 이 세트는 이전 작업에서 배포한 첫 번째 Azure VM에 연결됩니다.
 
-```
+    ```
     $resourceGroupName = 'az12001b-cl-RG'
 
     $location = (Get-AzResourceGroup -Name $resourceGroupName).Location
@@ -249,13 +249,13 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     $diskConfig = New-AzDiskConfig -Location $location -DiskSizeGB 128 -AccountType Premium_LRS -OsType Windows -CreateOption Empty
 
     for ($i=0;$i -lt 4;$i++) {New-AzDisk -ResourceGroupName $resourceGroupName -DiskName az12001b-cl-vm0-DataDisk$i -Disk $diskConfig}
-```
+    ```
 
 1.  Cloud Shell 창에서 다음 명령을 실행하여 4개의 관리 디스크로 구성된 두 번째 세트를 만듭니다. 이 세트는 이전 작업에서 배포한 두 번째 Azure VM에 연결됩니다.
 
-```
+    ```
     for ($i=0;$i -lt 4;$i++) {New-AzDisk -ResourceGroupName $resourceGroupName -DiskName az12001b-cl-vm1-DataDisk$i -Disk $diskConfig}
-```
+    ```
 
 1.  Azure Portal에서 이전 작업에서 프로비전한 첫 번째 Azure VM(**az12001b-cl-vm0**)의 블레이드로 이동합니다.
 
@@ -312,7 +312,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Cloud Shell 창에서 다음 명령을 실행하여 이전 연습의 두 번째 작업에서 배포한 Windows Server 2019 Azure VM을 **adatum.com** Active Directory 도메인에 가입시킵니다.
 
-```
+    ```
     $resourceGroupName = 'az12001b-cl-RG'
 
     $location = (Get-AzureRmResourceGroup -Name $resourceGroupName).Location
@@ -324,7 +324,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     $vmNames = @('az12001b-cl-vm0','az12001b-cl-vm1')
 
     foreach ($vmName in $vmNames) { Set-AzVMExtension -ResourceGroupName $resourceGroupName -ExtensionType 'JsonADDomainExtension' -Name 'joindomain' -Publisher "Microsoft.Compute" -TypeHandlerVersion "1.0" -Vmname $vmName -Location $location -SettingString $settingString -ProtectedSettingString $protectedSettingString }
-```
+    ```
 
 1.  A다음 태스크를 진행하기 전에 스크립트가 완료될 때까지 기다립니다.
 
@@ -413,15 +413,15 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  az12001b-cl-vm0에 대한 RDP 세션 내에서 Windows PowerShell ISE 세션을 시작하고 az12001b-cl-vm0과 az12001b-cl-vm1 모두에서 다음을 실행하여 장애 조치(failover) 클러스터링 및 원격 관리 도구 기능을 설치합니다.
 
-```
+    ```
     $nodes = @('az12001b-cl-vm1', 'az12001b-cl-vm0')
 
     Invoke-Command $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
 
     Invoke-Command $nodes {Install-WindowsFeature RSAT -IncludeAllSubFeature -Restart} 
-```
+    ```
 
-> **참고**: 이렇게 하면 두 Azure VM의 게스트 운영 체제가 다시 시작됩니다.
+    > **참고**: 이렇게 하면 두 Azure VM의 게스트 운영 체제가 다시 시작됩니다.
 
 1.  랩 컴퓨터의 Azure Portal에서 **+ 리소스 만들기**를 클릭합니다.
 
@@ -469,11 +469,11 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  az12001b-cl-vm0에 대한 RDP 세션 내에서 Windows PowerShell ISE 세션을 시작하고 다음을 실행하여 새 클러스터를 만듭니다.
 
-```
+    ```
     $nodes = @('az12001b-cl-vm0','az12001b-cl-vm1')
 
     New-Cluster -Name az12001b-cl-cl0 -Node $nodes -NoStorage -StaticAddress 10.0.1.6
-```
+    ```
 
 1.  az12001b-cl-vm0에 대한 RDP 세션 내에서 **Active Directory 관리 센터** 콘솔로 전환합니다.
 
@@ -495,23 +495,23 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Windows PowerShell ISE 세션 내에서 다음을 실행하여 Az PowerShell 모듈을 설치합니다.
 
-```
+    ```
     Install-PackageProvider -Name NuGet -Force
 
     Install-Module -Name Az -Force
-```
+    ```
 
 1.  Windows PowerShell ISE 세션 내에서 다음 명령을 실행하여 Azure AD 자격 증명으로 인증합니다.
 
-```
+    ```
     Add-AzAccount
-```
+    ```
 
-> **참고**: 메시지가 표시되면 이 랩에 사용할 Azure 구독에 대한 소유자 또는 기여자 역할이 포함된 회사 또는 학교 또는 개인 Microsoft 계정을 사용하여 로그인합니다.
+    > **참고**: 메시지가 표시되면 이 랩에 사용할 Azure 구독에 대한 소유자 또는 기여자 역할이 포함된 회사 또는 학교 또는 개인 Microsoft 계정을 사용하여 로그인합니다.
 
 1.  Windows PowerShell ISE 세션 내에서 다음을 실행하여 새 클러스터의 클라우드 감시 쿼럼을 설정합니다.
 
-```
+    ```
     $resourceGroupName = 'az12001b-cl-RG'
 
     $cwStorageAccountName = (Get-AzStorageAccount -ResourceGroupName $resourceGroupName)[0].StorageAccountName
@@ -519,7 +519,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     $cwStorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $cwStorageAccountName).Value[0]
 
     Set-ClusterQuorum -CloudWitness -AccountName $cwStorageAccountName -AccessKey $cwStorageAccountKey
-```
+    ```
 
 1.  결과 구성을 확인하려면 az12001b-cl-vm0에 대한 RDP 세션 내에서 서버 관리자의 **도구** 메뉴에서 **장애 조치(failover) 클러스터 관리자**를 시작합니다.
 
@@ -656,7 +656,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Cloud Shell 창에서 다음 명령을 실행하여 두 번째 부하 분산 장치에 사용할 공용 IP 주소를 만듭니다.
 
-```
+    ```
     $resourceGroupName = 'az12001b-cl-RG'
 
     $location = (Get-AzResourceGroup -Name $resourceGroupName).Location
@@ -664,11 +664,11 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     $pipName = 'az12001b-cl-lb0-pip'
 
     az network public-ip create --resource-group $resourceGroupName --name $pipName --sku Standard --location $location
-```
+    ```
 
 1.  Cloud Shell 창에서 다음 명령을 실행하여 두 번째 부하 분산 장치를 만듭니다.
 
-```
+    ```
     $lbName = 'az12001b-cl-lb1'
 
     $lbFeName = 'az12001b-cl-lb1-fe'
@@ -682,7 +682,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
     $bePoolConfiguration = New-AzLoadBalancerBackendAddressPoolConfig -Name $lbBePoolName
 
     New-AzLoadBalancer -ResourceGroupName $resourceGroupName -Location $location -Name $lbName -Sku Standard -BackendAddressPool $bePoolConfiguration -FrontendIpConfiguration $feIpconfiguration
-```
+    ```
 
 1.  Cloud Shell 창을 닫습니다.
 
@@ -830,9 +830,9 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Portal 하단의 **Cloud Shell** 명령 프롬프트에 다음 명령을 입력하고 **Enter** 키를 눌러 이 랩에서 만든 모든 리소스 그룹의 목록을 표시합니다.
 
-```
+    ```
     Get-AzResourceGroup | Where-Object {$_.ResourceGroupName -like 'az12001b-*'} | Select-Object ResourceGroupName
-```
+    ```
 
 1.  이 랩에서 만든 리소스 그룹만 출력에 포함되어 있는지 확인합니다. 다음 태스크에서 이러한 그룹을 삭제합니다.
 
@@ -840,9 +840,9 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  **Cloud Shell** 명령 프롬프트에 다음 명령을 입력하고 **Enter** 키를 눌러 이 랩에서 만든 리소스 그룹을 삭제합니다.
 
-```
+    ```
     Get-AzResourceGroup | Where-Object {$_.ResourceGroupName -like 'az12001b-*'} | Remove-AzResourceGroup -Force  
-```
+    ```
 
 1.  Portal 하단의 **Cloud Shell** 프롬프트를 닫습니다.
 

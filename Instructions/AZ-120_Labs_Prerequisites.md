@@ -28,12 +28,12 @@
 
 1.  Azure Portal에서 **Cloud Shell**의 PowerShell 프롬프트에서 다음을 실행합니다. 여기서 `<Azure_region>`은 이 랩에 사용할 대상 Azure 지역을 지정합니다(예: `westus2`):
 
-```
-Get-AzVMUsage -Location westus2 | Where-Object {$_.Name.Value -eq 'StandardDSv3Family'}
+    ```
+    Get-AzVMUsage -Location westus2 | Where-Object {$_.Name.Value -eq 'StandardDSv3Family'}
 
-Get-AzVMUsage -Location westus2 | Where-Object {$_.Name.Value -eq 'StandardESv3Family'}
+    Get-AzVMUsage -Location westus2 | Where-Object {$_.Name.Value -eq 'StandardESv3Family'}
 
-``` 
+    ``` 
 
     > **참고**: Azure 지역의 이름을 식별하려면 **Cloud Shell**의 Bash 프롬프트에서 `(Get-AzLocation).Location`을 실행합니다.
    
@@ -61,7 +61,7 @@ Get-AzVMUsage -Location westus2 | Where-Object {$_.Name.Value -eq 'StandardESv3F
 
     -   SKU 제품군: **DSv3 시리즈** 및 **ESv3 시리즈**
 
-1.  **세부 정보** 블레이드에서 각 SKU 시리즈에 대한 새 제한을 지정하고 **다음**을 클릭합니다.** 검토 + 만들기**:
+1.  **세부 정보** 블레이드에서 각 SKU 시리즈에 대한 새 제한을 지정하고 **다음**을 클릭합니다.**검토 + 만들기**:
 
     -   심각도: **C - 최소 영향**
 
