@@ -104,11 +104,11 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
 1.  **템플릿 편집** 블레이드에서 다음 변경 내용을 적용하고 **저장**을 선택합니다.
 
-    -   **197**번 줄에서 `"dbVMSize": "Standard_E8s_v3"`를 `"dbVMSize": "Standard_D4s_v3"`로 바꿉니다.
+    -   **197**번 줄에서 `"dbVMSize": "Standard_E8s_v3",`를 `"dbVMSize": "Standard_D4s_v3",`로 바꿉니다.
 
-    -   **198**번 줄에서 `"ascsVMSize": "Standard_D2s_v3"`를 `"ascsVMSize": "Standard_DS1_v2"`로 바꿉니다.
+    -   **198**번 줄에서 `"ascsVMSize": "Standard_D2s_v3",`를 `"ascsVMSize": "Standard_DS1_v2",`로 바꿉니다.
 
-    -   **199**번 줄에서 `"diVMSize": "Standard_D2s_v3"`를 `"diVMSize": "Standard_DS1_v2"`로 바꿉니다.
+    -   **199**번 줄에서 `"diVMSize": "Standard_D2s_v3",`를 `"diVMSize": "Standard_DS1_v2",`로 바꿉니다.
 
 1.  **SAP NetWeaver 3-tier (managed disk)** 블레이드에서 다음 설정을 사용하여 배포를 시작합니다.
 
@@ -179,7 +179,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   이미지: **Windows Server 2019 Datacenter**
 
-    -   크기: **표준 DS1 v2*** 또는 유사한 항목*
+    -   크기: **표준 DS1 v2** *또는 유사한 항목*
 
     -   사용자 이름: **학생**
 
@@ -195,7 +195,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   가상 네트워크: **az12003a-sap-vnet**
 
-    -   서브넷: **bastionSubnet(10.3.255.0/24)**이라는 이름의 새 서브넷
+    -   서브넷: **bastionSubnet(10.3.255.0/24)** 이라는 이름의 새 서브넷
 
     -   공용 IP: **az12003a-vm0-ip***라는 이름의 새 IP 주소*
 
@@ -538,7 +538,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
 ### 작업 3: Azure 구독 ID 및 Azure AD 테넌트 ID의 값을 식별합니다.
 
-1.  랩 컴퓨터의 브라우저 창에서 Azure Portal**(https://portal.azure.com)**로 이동하고 구독과 연결된 Azure AD 테넌트의 전역 관리자 역할이 있는 사용자 계정으로 로그인했는지 확인합니다.
+1.  랩 컴퓨터의 브라우저 창에서 Azure Portal **(https://portal.azure.com)** 로 이동하고 구독과 연결된 Azure AD 테넌트의 전역 관리자 역할이 있는 사용자 계정으로 로그인했는지 확인합니다.
 
 1.  Azure Portal에서 Cloud Shell의 Bash 세션을 시작합니다. 
 
@@ -612,7 +612,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
 ### 작업 7: Hawk를 사용하여 Linux를 실행하는 Azure VM에서 클러스터링 구성 검토
 
-1.  az12003a-vm0에 대한 RDP 세션에서 Internet Explorer를 시작하고 **https://i20-db-0:7630**으로 이동합니다. 그러면 SUSE Hawk 로그인 페이지가 표시됩니다.
+1.  az12003a-vm0에 대한 RDP 세션에서 Internet Explorer를 시작하고 **https://i20-db-0:7630** 으로 이동합니다. 그러면 SUSE Hawk 로그인 페이지가 표시됩니다.
 
    > **참고**: **이 사이트는 안전하지 않습니다** 메시지는 무시하세요.
 

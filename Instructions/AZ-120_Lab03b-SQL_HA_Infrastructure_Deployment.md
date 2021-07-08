@@ -54,7 +54,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   구독: *Azure 구독의 이름*
 
-    -   리소스 그룹: *새 리소스 그룹* **az12003b-ad-RG**의 이름
+    -   리소스 그룹: *새 리소스 그룹* **az12003b-ad-RG***의 이름*
 
     -   위치: *Azure VM을 배포할 수 있는 Azure 지역*
 
@@ -70,7 +70,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   DnsPrefix: *기본값 수락*
 
-    -   V 크기: **표준 D4S\_v3**
+    -   Vm 크기: **표준 D4S\_v3**
 
     -   _artifacts 위치: *기본값 수락*
 
@@ -138,7 +138,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
 ### 작업 3: 고가용성 SAP NetWeaver 배포를 호스트할 Windows Server 2016을 실행하는 Azure VM을 프로비전하는 Azure Resource Manager 템플릿 배포
 
-1.  랩 컴퓨터의 Azure Portal에서 **템플릿 배포(사용자 지정 템플릿을 사용한 배포)**를 검색하여 선택합니다.
+1.  랩 컴퓨터의 Azure Portal에서 **템플릿 배포(사용자 지정 템플릿을 사용한 배포)** 를 검색하여 선택합니다.
 
 1.  **사용자 지정 배포** 블레이드의 **템플릿 선택(면책 조항)** 드롭다운 목록에서 **sap-3-tier-marketplace-image-md**를 입력하고 **템플릿 선택**을 클릭합니다.
 
@@ -148,11 +148,11 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
 1.  **템플릿 편집** 블레이드에서 다음 변경 내용을 적용하고 **저장**을 선택합니다.
 
-    -   **197**번 줄에서 `"dbVMSize": "Standard_E8s_v3"`를 `"dbVMSize": "Standard_D4s_v3"`로 바꿉니다.
+    -   **197**번 줄에서 `"dbVMSize": "Standard_E8s_v3",`를 `"dbVMSize": "Standard_D4s_v3",`로 바꿉니다.
 
-    -   **198**번 줄에서 `"ascsVMSize": "Standard_D2s_v3"`를 `"ascsVMSize": "Standard_DS1_v2"`로 바꿉니다.
+    -   **198**번 줄에서 `"ascsVMSize": "Standard_D2s_v3",`를 `"ascsVMSize": "Standard_DS1_v2",`로 바꿉니다.
 
-    -   **199**번 줄에서 `"diVMSize": "Standard_D2s_v3"`를 `"diVMSize": "Standard_DS1_v2"`로 바꿉니다.
+    -   **199**번 줄에서 `"diVMSize": "Standard_D2s_v3",`를 `"diVMSize": "Standard_DS1_v2",`로 바꿉니다.
 
 1.  **SAP NetWeaver 3-tier (managed disk)** 블레이드로 돌아가서 다음 설정을 사용하여 배포를 시작합니다.
 
@@ -208,7 +208,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   구독: **Azure 구독 이름**.
 
-    -   리소스 그룹: *새 리소스 그룹* **az12003b-s2d-RG**의 이름
+    -   리소스 그룹: *새 리소스 그룹* **az12003b-s2d-RG***의 이름*
 
     -   지역: *이 연습의 이전 작업에서 Azure VM을 배포한 것과 동일한 Azure 지역*
 
@@ -272,7 +272,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   구독: *Azure 구독의 이름*
 
-    -   리소스 그룹: *새 리소스 그룹* **az12003b-dmz-RG**의 이름
+    -   리소스 그룹: *새 리소스 그룹* **az12003b-dmz-RG***의 이름*
 
     -   가상 머신 이름: **az12003b-vm0**
 
@@ -298,7 +298,7 @@ Adatum Corporation에서는 Azure에 배포할 SAP NetWeaver를 준비하는 과
 
     -   가상 네트워크: **adVNET**
 
-    -   서브넷: **dmzSubnet (10.0.255.0/24)***이라는 이름의 새 서브넷*
+    -   서브넷: **dmzSubnet (10.0.255.0/24)** *이라는 이름의 새 서브넷*
 
     -   공용 IP: **az12003b-vm0-ip***라는 이름의 새 IP 주소*
 

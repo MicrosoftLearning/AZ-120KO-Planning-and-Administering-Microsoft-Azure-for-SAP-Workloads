@@ -98,7 +98,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   가용성 옵션: **가용성 집합**
 
-    -   가용성 집합: *이름이* **az12001b-cl-avset***이고 2개의 장애 도메인과 5개의 업데이트 도메인이 있는 새 가용성 집합*
+    -   가용성 집합: *이름이* **az12001b-cl-avset** *이고 2개의 장애 도메인과 5개의 업데이트 도메인이 있는 새 가용성 집합*
 
     -   이미지: **Windows Server 2019 Datacenter**
 
@@ -118,11 +118,11 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   가상 네트워크: **adVNET**
 
-    -   서브넷 이름: **clSubnet***라는 이름의 새 서브넷*
+    -   서브넷 이름: **clSubnet** *라는 이름의 새 서브넷*
 
     -   서브넷 주소 범위: **10.0.1.0/24**
 
-    -   공용 IP 주소: **az12001b-cl-vm0-ip***라는 이름의 새 IP 주소*
+    -   공용 IP 주소: **az12001b-cl-vm0-ip** *라는 이름의 새 IP 주소*
 
     -   NIC 네트워크 보안 그룹: **기본**
 
@@ -188,7 +188,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   서브넷 이름: **clSubnet**
 
-    -   공용 IP 주소: **az12001b-cl-vm1-ip***라는 이름의 새 IP 주소*
+    -   공용 IP 주소: **az12001b-cl-vm1-ip** *라는 이름의 새 IP 주소*
 
     -   NIC 네트워크 보안 그룹: **기본**
 
@@ -301,7 +301,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Azure Portal의 Cloud Shell에서 PowerShell 세션을 시작합니다. 
 
-1. Cloud Shell 창에서 다음 명령을 실행하여 `resourceGroupName` 변수의 값을 이전 연습에서 프로비전한 **Windows Server 2019 Datacenter** Azure VM 쌍을 포함하는 리소스 그룹의 이름으로 설정합니다.
+1. Cloud Shell 창에서 다음 명령을 실행하여 `$resourceGroupName` 변수의 값을 이전 연습에서 프로비전한 **Windows Server 2019 Datacenter** Azure VM 쌍을 포함하는 리소스 그룹의 이름으로 설정합니다.
 
     ```
     $resourceGroupName = 'az12001b-cl-RG'
@@ -336,7 +336,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  az12001b-cl-vm0에 대한 RDP 세션 내의 서버 관리자에서 **로컬 서버** 보기로 이동하고 **IE 고급 보안 구성**을 일시적으로 끕니다.
 
-1.  az12001b-cl-vm0에 대한 RDP 세션 내의 서버 관리자에서 **파일 및 스토리지 서비스** -> **서버 ** 노드로 이동합니다. 
+1.  az12001b-cl-vm0에 대한 RDP 세션 내의 서버 관리자에서 **파일 및 스토리지 서비스** -> **서버** 노드로 이동합니다. 
 
 1.  **스토리지 풀** 보기로 이동하여 이전 연습에서 Azure VM에 연결한 모든 디스크가 표시되는지 확인합니다.
 
@@ -344,7 +344,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   이름: **데이터 스토리지 풀**
 
-    -   물리적 디스크: *첫 세 LUN 번호(0-2)에 해당하는 디스크 번호가 있는 3개의 디스크를 선택하고 해당 할당을 * **자동**으로 설정합니다.
+    -   물리적 디스크: *첫 세 LUN 번호(0-2)에 해당하는 디스크 번호가 있는 3개의 디스크를 선택하고 해당 할당을* **자동**으로 설정합니다.
 
     > **참고**: **섀시** 열의 항목을 사용하여 **LUN** 번호를 식별합니다.
 
@@ -649,7 +649,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1.  Azure Portal의 Cloud Shell에서 PowerShell 세션을 시작합니다. 
 
-1. Cloud Shell 창에서 다음 명령을 실행하여 `resourceGroupName` 변수의 값을 이 랩의 첫 번째 연습에서 프로비전한 **Windows Server 2019 Datacenter** Azure VM 쌍을 포함하는 리소스 그룹의 이름으로 설정합니다.
+1. Cloud Shell 창에서 다음 명령을 실행하여 `$resourceGroupName` 변수의 값을 이 랩의 첫 번째 연습에서 프로비전한 **Windows Server 2019 Datacenter** Azure VM 쌍을 포함하는 리소스 그룹의 이름으로 설정합니다.
 
     ```
     $resourceGroupName = 'az12001b-cl-RG'
@@ -731,7 +731,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   백 엔드 풀: **az12001b-cl-lb1-bepool(가상 머신 2개)**
 
-    -   상태 프로브:**az12001b-cl-lb1-hprobe(TCP:80)**
+    -   상태 프로브: **az12001b-cl-lb1-hprobe(TCP:80)**
 
     -   세션 지속성: **없음**
 
@@ -761,7 +761,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
     -   이미지: **Windows Server 2019 Datacenter**
 
-    -   크기: **표준 DS1 v2*** 또는 유사한 항목*
+    -   크기: **표준 DS1 v2** *또는 유사한 항목*
 
     -   사용자 이름: **student**
 
@@ -827,7 +827,7 @@ SQL Server를 데이터베이스 관리 시스템으로 사용하여 Azure 기�
 
 1. Portal 상단에서 **Cloud Shell** 아이콘을 클릭하여 Cloud Shell 창을 열고 셸로 PowerShell을 선택합니다.
 
-1. Cloud Shell 창에서 다음 명령을 실행하여 `resourceGroupName` 변수의 값을 이 랩의 첫 번째 연습에서 프로비전한 **Windows Server 2019 Datacenter** Azure VM 쌍을 포함하는 리소스 그룹의 이름으로 설정합니다.
+1. Cloud Shell 창에서 다음 명령을 실행하여 `$resourceGroupName` 변수의 값을 이 랩의 첫 번째 연습에서 프로비전한 **Windows Server 2019 Datacenter** Azure VM 쌍을 포함하는 리소스 그룹의 이름으로 설정합니다.
 
     ```
     $resourceGroupNamePrefix = 'az12001b-'
